@@ -21,7 +21,7 @@ class PigLatinizer
   # end
 
   def translate_word(text)
-    if /(^[aeiouAEIOU])/.match(text.split('')[0])
+    if /^[aeiou]/i.match(text)
       "#{text}way"
     else
       parts = text.split(/([aeiou].*)/)
